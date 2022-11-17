@@ -1,0 +1,18 @@
+@import "./utils/variables";
+@import "./base/common";
+@import "./base/reset";
+@import "./utils/visually-hidden";
+
+@import "./components/container";
+@import "./components/header";
+@import "./components/logo";
+@import "./components/footer";
+@import "./components/modal";
+
+@import "./layouts/in-hero";
+@import "./layouts/in-advances";
+@import "./layouts/in-pictures";
+@import "./layouts/in-people";
+@import "./layouts/in-icon";
+@import "./layouts/ptf-button";
+@import "./layouts/ptf-main";
