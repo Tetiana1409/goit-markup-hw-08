@@ -1,21 +1,33 @@
 .icon__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-tittle-color);
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .icon-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .icon-list__item {
-  width: calc((100% - 150px) / 6);
   height: 92px;
+  width: calc((100% - 30px) / 2);
+  @include tablet {
+    width: calc((100% - 60px) / 3);
+  }
+  @include desktop {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .icon-list__ikon {
