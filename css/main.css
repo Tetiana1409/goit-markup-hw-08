@@ -679,11 +679,22 @@ ol {
 
 .card-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .card-list__item {
-  width: 270px;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .card-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-list__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .card-list__wrap {
@@ -691,7 +702,7 @@ ol {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background: var(--active-btn-bg-color);
   border-radius: 4px;
@@ -708,8 +719,19 @@ ol {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--primary-tittle-color);
+}
+@media screen and (min-width: 768px) {
+  .card-list__title {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-list__title {
+    text-align: left;
+  }
 }
 
 .card-list__text {
