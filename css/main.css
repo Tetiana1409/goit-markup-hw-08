@@ -10,6 +10,7 @@
   --active-btn-bg-color: #f5f4fa;
   --team-bg-color: #f5f4fa;
   --border-color: #eeeeee;
+  --gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 body {
@@ -632,19 +633,40 @@ ol {
 }
 
 .overlay {
-  width: 100%;
-  height: 400px;
+  min-width: 480px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imghero.jpg);
+  background-image: var(--gradient), url(/images/hero/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .overlay {
+    background-image: var(--gradient), url(/images/hero/hero-bg-2x-mob.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-image: var(--gradient), url(/images/hero/hero-bg-tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: var(--gradient), url(/images/hero/hero-bg-2x-tab.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .overlay {
+    background-image: var(--gradient), url(/images/hero/imghero.jpg);
     max-width: 1600px;
     min-height: 600px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: var(--gradient), url(/images/hero/hero-bg-2x-desk.jpg);
   }
 }
 
@@ -769,22 +791,40 @@ ol {
 }
 
 .pictures__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-tittle-color);
 }
+@media screen and (min-width: 1200px) {
+  .pictures__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
 
 .pictures-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .pictures-list__item {
-  width: calc((100% - 60px) / 3);
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .pictures-list__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pictures-list__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .pictures-list__thumb {
@@ -793,11 +833,21 @@ ol {
 
 .pictures-list__overlay {
   position: absolute;
-  width: 370px;
+  width: 100%;
   height: 70px;
   bottom: 0;
   left: 0;
   background-color: rgba(47, 48, 58, 0.8);
+}
+@media screen and (min-width: 768px) {
+  .pictures-list__overlay {
+    height: 43px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pictures-list__overlay {
+    height: 70px;
+  }
 }
 
 .pictures-list__tittle {
@@ -812,6 +862,13 @@ ol {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-white-color);
+}
+@media screen and (min-width: 768px) {
+  .pictures-list__tittle {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.15;
+  }
 }
 
 .people {

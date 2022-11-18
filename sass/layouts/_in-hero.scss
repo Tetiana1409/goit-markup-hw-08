@@ -7,21 +7,35 @@
 }
 
 .overlay {
-  width: 100%;
-  height: 400px;
+  min-width: 480px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/imghero.jpg);
+  background-image: var(--gradient), url(/images/hero/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @include retina {
+    background-image: var(--gradient), url(/images/hero/hero-bg-2x-mob.jpg);
+  }
+
+  @include tablet {
+    background-image: var(--gradient), url(/images/hero/hero-bg-tablet.jpg);
+
+    @include retina {
+      background-image: var(--gradient), url(/images/hero/hero-bg-2x-tab.jpg);
+    }
+  }
+
   @include desktop {
+    background-image: var(--gradient), url(/images/hero/imghero.jpg);
     max-width: 1600px;
     min-height: 600px;
+
+    @include retina {
+      background-image: var(--gradient), url(/images/hero/hero-bg-2x-desk.jpg);
+    }
   }
 }
 

@@ -128,18 +128,33 @@
         </div>
       </section>
 
-      <!-- <section class="pictures section">
+      <section class="pictures section">
         <div class="container">
           <h2 class="pictures__title">Чим ми займаємося</h2>
           <ul class="list pictures-list">
             <li class="pictures-list__item">
               <div class="pictures-list__thumb">
-                <img
-                  src="./images/box1.jpg"
-                  alt="Людина працює за комп'ютером"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/box1.jpg"
+                    alt="Людина працює за комп'ютером"
+                    width="450"
+                    height="294"
+                  />
+                </picture>
+
                 <div class="pictures-list__overlay">
                   <h3 class="pictures-list__tittle">Десктопні додатки</h3>
                 </div>
@@ -147,12 +162,28 @@
             </li>
             <li class="pictures-list__item">
               <div class="pictures-list__thumb">
-                <img
-                  src="./images/box2.jpg"
-                  alt="Людина звіряє інформацію в телефоні з комп'ютером"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                    src="./images/box2.jpg"
+                    alt="Людина звіряє інформацію в телефоні з комп'ютером"
+                    width="450"
+                    height="294"
+                  />
+                </picture>
+
                 <div class="pictures-list__overlay">
                   <h3 class="pictures-list__tittle">Мобільні додатки</h3>
                 </div>
@@ -160,12 +191,28 @@
             </li>
             <li class="pictures-list__item">
               <div class="pictures-list__thumb">
-                <img
-                  src="./images/box3.jpg"
-                  alt="Людина дивиться на палітру кольорів на планшеті"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                    src="./images/box3.jpg"
+                    alt="Людина дивиться на палітру кольорів на планшеті"
+                    width="450"
+                    height="294"
+                  />
+                </picture>
+
                 <div class="pictures-list__overlay">
                   <h3 class="pictures-list__tittle">Дизайнерські рішення</h3>
                 </div>
@@ -173,19 +220,43 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <section class="people section">
         <div class="container">
           <h2 class="people__title">Наша команда</h2>
           <ul class="people-list list">
             <li class="people-list__item">
-              <img
-                src="./images/img1.jpg"
-                alt="Усміхнений хлопець в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/people/img1.jpg    1x,
+                    ./images/people/img1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/people/img1-tab.jpg    1x,
+                    ./images/people/img1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/people/img1-mob.jpg    1x,
+                    ./images/people/img1-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/people/img1-mob.jpg"
+                  alt="Усміхнений хлопець в окулярах"
+                  width="450"
+                  height="260"
+                />
+              </picture>
+
               <div class="people-list__wrap">
                 <h3 class="people-list__title">Ігор Дем'яненко</h3>
                 <p class="people-list__text">Product Designer</p>
@@ -242,12 +313,36 @@
               </div>
             </li>
             <li class="people-list__item">
-              <img
-                src="./images/img2.jpg"
-                alt="Усміхнена дівчина в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/people/img2.jpg    1x,
+                    ./images/people/img2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/people/img2-tab.jpg    1x,
+                    ./images/people/img2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/people/img2-mob.jpg    1x,
+                    ./images/people/img2-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/people/img2-mob.jpg"
+                  alt="Усміхнена дівчина в окулярах"
+                  width="450"
+                  height="260"
+                />
+              </picture>
+
               <div class="people-list__wrap">
                 <h3 class="people-list__title">Ольга Рєпіна</h3>
                 <p class="people-list__text">Frontend Developer</p>
@@ -304,12 +399,36 @@
               </div>
             </li>
             <li class="people-list__item">
-              <img
-                src="./images/img3.jpg"
-                alt="Усміхнений хлопець"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/people/img3.jpg    1x,
+                    ./images/people/img3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/people/img3-tab.jpg    1x,
+                    ./images/people/img3-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/people/img3-mob.jpg    1x,
+                    ./images/people/img3-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/people/img3-mob.jpg"
+                  alt="Усміхнений хлопець"
+                  width="450"
+                  height="260"
+                />
+              </picture>
+
               <div class="people-list__wrap">
                 <h3 class="people-list__title">Микола Тарасов</h3>
                 <p class="people-list__text">Marketing</p>
@@ -366,12 +485,36 @@
               </div>
             </li>
             <li class="people-list__item">
-              <img
-                src="./images/img4.jpg"
-                alt="Хлопець в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/people/img4.jpg    1x,
+                    ./images/people/img4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/people/img4-tab.jpg    1x,
+                    ./images/people/img4-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/people/img4-mob.jpg    1x,
+                    ./images/people/img4-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/people/img4-mob.jpg"
+                  alt="Хлопець в окулярах"
+                  width="450"
+                  height="260"
+                />
+              </picture>
+
               <div class="people-list__wrap">
                 <h3 class="people-list__title">Михайло Єрмаков</h3>
                 <p class="people-list__text">UI Designer</p>
