@@ -117,6 +117,10 @@ ol {
   border-bottom: 1px solid #ececec;
 }
 
+.header__container {
+  display: flex;
+}
+
 .menu .current {
   color: var(--accent-color);
 }
@@ -127,6 +131,14 @@ ol {
   right: 10px;
   background-color: transparent;
   border-color: transparent;
+  color: var(--primary-tittle-color);
+}
+.menu-open:hover, .menu-open:focus {
+  color: var(--accent-color);
+}
+
+.menu-open-icon {
+  fill: currentColor;
 }
 
 .mob-menu {
@@ -153,22 +165,17 @@ ol {
   padding: 0;
   background-color: transparent;
   border-color: transparent;
+  color: var(--primary-tittle-color);
+}
+.menu-close-button:hover, .menu-close-button:focus {
+  color: var(--accent-color);
 }
 
 .menu-close-button-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: black;
-}
-
-.header__container {
-  display: flex;
-}
-
-.mob-contacts-wrap {
-  display: flex;
-  flex-direction: column;
+  fill: currentColor;
 }
 
 .mob {
@@ -176,6 +183,10 @@ ol {
   flex-direction: column;
   gap: 32px;
   margin-bottom: 65px;
+}
+
+.mob .current {
+  color: var(--accent-color);
 }
 
 .mob:not(:last-child) {
@@ -187,11 +198,18 @@ ol {
 }
 
 .mob__link {
+  position: relative;
+  display: inline-block;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--primary-tittle-color);
+}
+
+.mob-contacts-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .mob-contacts {
@@ -222,24 +240,28 @@ ol {
   gap: 20px;
 }
 
+.mob-soc-item:not(:last-child) {
+  position: relative;
+}
+.mob-soc-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 2px;
+  right: -20px;
+  bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
 .mob-soc-link {
   position: relative;
+  display: block;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-}
-
-.mob-soc-link::after {
-  content: " ";
-  position: absolute;
-  right: 0;
-  width: 22px;
-  height: 1px;
-  position: absolute;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
 }
 
 .menu {
