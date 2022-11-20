@@ -5,6 +5,7 @@
 
 .header__container {
   display: flex;
+  justify-content: space-between;
 }
 
 .menu .current {
@@ -14,13 +15,18 @@
 .menu-open {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 15px;
+  bottom: 10px;
+  padding: 0;
+  border: none;
   background-color: transparent;
-  border-color: transparent;
   color: var(--primary-tittle-color);
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @include tablet {
+    display: none;
   }
 }
 
@@ -29,14 +35,13 @@
 }
 
 .mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  top: 0;
-  position: fixed;
-  z-index: 1;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
+  z-index: 999;
+  padding: 48px 40px;
   background: var(--primary-white-color);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -156,8 +161,13 @@
 }
 
 .menu {
-  display: none;
-  gap: 50px;
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: flex;
+    gap: 50px;
+  }
 }
 
 .navigation {
@@ -166,7 +176,21 @@
 }
 
 .menu__wrap {
-  margin-left: auto;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .menu__link {
@@ -202,22 +226,30 @@
 
 .menu__tel,
 .menu__mail {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  @include tablet {
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  @include desktop {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
