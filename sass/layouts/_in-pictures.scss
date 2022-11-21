@@ -1,5 +1,9 @@
 .pictures {
-  padding-top: 0;
+  display: none;
+  @include desktop {
+    display: block;
+    padding-top: 0;
+  }
 }
 
 .pictures__title {
