@@ -14,9 +14,8 @@
 
 .menu-open {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  bottom: 10px;
+  top: 0px;
+  right: 0px;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -25,13 +24,28 @@
   &:focus {
     color: var(--accent-color);
   }
+  @include mobile {
+    top: 10px;
+    right: 15px;
+    bottom: 10px;
+  }
+
   @include tablet {
     display: none;
   }
 }
 
 .menu-open-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
   fill: currentColor;
+  @include mobile {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .mob-menu {
@@ -161,9 +175,7 @@
 }
 
 .menu {
-  @include mobile {
-    display: none;
-  }
+  display: none;
   @include tablet {
     display: flex;
     gap: 50px;
