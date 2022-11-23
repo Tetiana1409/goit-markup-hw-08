@@ -996,7 +996,7 @@ ol {
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: var(--gradient), url(/images/hero/hero-bg-mobile.jpg);
+  background-image: var(--gradient), url(../images/hero/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
