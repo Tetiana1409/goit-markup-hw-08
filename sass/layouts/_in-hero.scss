@@ -17,24 +17,24 @@
   background-position: center;
 
   @include retina {
-    background-image: var(--gradient), url(/images/hero/hero-bg-2x-mob.jpg);
+    background-image: var(--gradient), url(../images/hero/hero-bg-2x-mob.jpg);
   }
 
   @include tablet {
-    background-image: var(--gradient), url(/images/hero/hero-bg-tablet.jpg);
+    background-image: var(--gradient), url(../images/hero/hero-bg-tablet.jpg);
 
     @include retina {
-      background-image: var(--gradient), url(/images/hero/hero-bg-2x-tab.jpg);
+      background-image: var(--gradient), url(../images/hero/hero-bg-2x-tab.jpg);
     }
   }
 
   @include desktop {
-    background-image: var(--gradient), url(/images/hero/imghero.jpg);
+    background-image: var(--gradient), url(../images/hero/imghero.jpg);
     max-width: 1600px;
     min-height: 600px;
 
     @include retina {
-      background-image: var(--gradient), url(/images/hero/hero-bg-2x-desk.jpg);
+      background-image: var(--gradient), url(../images/hero/hero-bg-2x-desk.jpg);
     }
   }
 }
