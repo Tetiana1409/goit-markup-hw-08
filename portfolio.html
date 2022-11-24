@@ -26,18 +26,22 @@
     <header class="header">
       <div class="container header__container">
         <nav class="navigation">
-          <a class="link logo navigation__logo" href="./index.html"
+          <a class="link logo navigation__logo" href="/index.html"
             ><span class="logo--accent-text">Web</span
             ><span class="logo--black-text">Studio</span></a
           >
+          <button class="menu-open" type="button" data-menu-open>
+            <svg class="menu-open-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-menu-mobile"></use>
+            </svg>
+          </button>
+
           <ul class="menu list">
             <li class="menu__item">
-              <a class="menu__link link" href="./index.html">Студія</a>
+              <a class="menu__link link current" href="./index.html">Студія</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link link current" href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="menu__link link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="menu__item">
               <a class="menu__link link" href="#">Контакти</a>
@@ -69,21 +73,25 @@
       <section class="button section">
         <div class="container">
           <ul class="list button-list">
-            <li>
-              <button type="button" class="button-primary">Усі</button>
-            </li>
-            <li>
-              <button type="button" class="button-primary">Веб-сайти</button>
-            </li>
-            <li>
-              <button type="button" class="button-primary">Додатки</button>
-            </li>
-            <li>
-              <button type="button" class="button-primary">Дизайн</button>
-            </li>
-            <li>
-              <button type="button" class="button-primary">Маркетинг</button>
-            </li>
+            <div class="button-first-wrap">
+              <li>
+                <button type="button" class="button-primary">Усі</button>
+              </li>
+              <li>
+                <button type="button" class="button-primary">Веб-сайти</button>
+              </li>
+              <li>
+                <button type="button" class="button-primary">Додатки</button>
+              </li>
+            </div>
+            <div class="button-secondary-wrap">
+              <li>
+                <button type="button" class="button-primary">Дизайн</button>
+              </li>
+              <li>
+                <button type="button" class="button-primary">Маркетинг</button>
+              </li>
+            </div>
           </ul>
 
           <ul class="list main-list">

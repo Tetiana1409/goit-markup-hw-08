@@ -1,17 +1,13 @@
 .navigation__logo {
-  @include mobile {
-    display: block;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
   @include tablet {
-    display: block;
     margin-right: 88px;
     padding-top: 26px;
     padding-bottom: 26px;
   }
   @include desktop {
-    display: block;
     margin-right: 93px;
     padding-top: 24px;
     padding-bottom: 25px;

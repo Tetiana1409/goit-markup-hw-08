@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
@@ -15,7 +14,8 @@
 .menu-open {
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: 25px;
+  bottom: 10px;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -26,8 +26,7 @@
   }
   @include mobile {
     top: 10px;
-    right: 15px;
-    bottom: 10px;
+    right: 45px;
   }
 
   @include tablet {
@@ -224,17 +223,17 @@
   }
 }
 
-.current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-}
+// .current::after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   display: block;
+//   width: 100%;
+//   height: 4px;
+//   background-color: var(--accent-color);
+//   border-radius: 2px;
+// }
 
 .menu__tel,
 .menu__mail {
