@@ -38,10 +38,12 @@
 
           <ul class="menu list">
             <li class="menu__item">
-              <a class="menu__link link current" href="./index.html">Студія</a>
+              <a class="menu__link link" href="./index.html">Студія</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link link" href="./portfolio.html">Портфоліо</a>
+              <a class="menu__link link current" href="./portfolio.html"
+                >Портфоліо</a
+              >
             </li>
             <li class="menu__item">
               <a class="menu__link link" href="#">Контакти</a>
@@ -67,43 +69,139 @@
           </li>
         </ul>
       </div>
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mobile-wrap">
+          <button class="menu-close-button" data-menu-close type="button">
+            <svg class="menu-close-button-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-mob-menu-close"></use>
+            </svg>
+          </button>
+          <ul class="mob list">
+            <li class="mob__item">
+              <a class="mob__link link current" href="./index.html">Студія</a>
+            </li>
+            <li class="mob__item">
+              <a class="mob__link link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mob__item">
+              <a class="mob__link link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mob-contacts-wrap">
+          <ul class="mob-contacts list mob__wrap">
+            <li class="mob-contacts__item">
+              <a class="mob-contacts__tel link" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mob-contacts__item">
+              <a
+                class="mob-contacts__mail link"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-soc list">
+            <li class="mob-soc-item">
+              <a
+                href=""
+                class="mob-soc-link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="mob-soc-item link">
+              <a
+                href=""
+                class="mob-soc-link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Twitter</a
+              >
+            </li>
+            <li class="mob-soc-item link">
+              <a
+                href=""
+                class="mob-soc-link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Facebook</a
+              >
+            </li>
+            <li class="mob-soc-item link">
+              <a
+                href=""
+                class="mob-soc-link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="button section">
         <div class="container">
           <ul class="list button-list">
-            <div class="button-first-wrap">
-              <li>
-                <button type="button" class="button-primary">Усі</button>
-              </li>
-              <li>
-                <button type="button" class="button-primary">Веб-сайти</button>
-              </li>
-              <li>
-                <button type="button" class="button-primary">Додатки</button>
-              </li>
-            </div>
-            <div class="button-secondary-wrap">
-              <li>
-                <button type="button" class="button-primary">Дизайн</button>
-              </li>
-              <li>
-                <button type="button" class="button-primary">Маркетинг</button>
-              </li>
-            </div>
+            <li class="pf-button-item">
+              <button type="button" class="button-primary">Усі</button>
+            </li>
+            <li class="pf-button-item">
+              <button type="button" class="button-primary">Веб-сайти</button>
+            </li>
+            <li class="pf-button-item">
+              <button type="button" class="button-primary">Додатки</button>
+            </li>
+            <li class="pf-button-item">
+              <button type="button" class="button-primary">Дизайн</button>
+            </li>
+            <li class="pf-button-item">
+              <button type="button" class="button-primary">Маркетинг</button>
+            </li>
           </ul>
 
           <ul class="list main-list">
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf1.jpg"
-                    alt="комп'ютер з веб-сайтом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1.jpg    1x,
+                        ./images/portfolio/pf1-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1-tab.jpg    1x,
+                        ./images/portfolio/pf1-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1-mob.jpg    1x,
+                        ./images/portfolio/pf1-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf1.jpg"
+                      alt="комп'ютер з веб-сайтом"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -119,15 +217,41 @@
                 </div>
               </a>
             </li>
+
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf2.jpg"
-                    alt="два хлопця грають в баскетбол"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf2.jpg    1x,
+                        ./images/portfolio/pf2-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf2-tab.jpg    1x,
+                        ./images/portfolio/pf2-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf2-mob.jpg    1x,
+                        ./images/portfolio/pf2-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf2.jpg"
+                      alt="два хлопця грають в баскетбол"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
+
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -137,7 +261,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="pf-text">
                   <h3 class="main-list-tittle">
                     Постер <span lang="en">New Orlean vs Golden Star</span>
@@ -146,15 +269,40 @@
                 </div>
               </a>
             </li>
+
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf3.jpg"
-                    alt="логотип акула з надписом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf3.jpg    1x,
+                        ./images/portfolio/pf3-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf3-tab.jpg    1x,
+                        ./images/portfolio/pf3-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf3-mob.jpg    1x,
+                        ./images/portfolio/pf3-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf3.jpg"
+                      alt="логотип акула з надписом"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -164,7 +312,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="pf-text">
                   <h3 class="main-list-tittle">
                     Ресторан <span lang="en"> Seafood</span>
@@ -173,15 +320,40 @@
                 </div>
               </a>
             </li>
+
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf4.jpg"
-                    alt="навушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf4.jpg    1x,
+                        ./images/portfolio/pf4-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf4-tab.jpg    1x,
+                        ./images/portfolio/pf4-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf4-mob.jpg    1x,
+                        ./images/portfolio/pf4-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf4.jpg"
+                      alt="навушники"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -191,7 +363,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="pf-text">
                   <h3 class="main-list-tittle">
                     Проєкт <span lang="en"> Prime</span>
@@ -200,15 +371,41 @@
                 </div>
               </a>
             </li>
+
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf5.jpg"
-                    alt="дві невнликих коробочки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf5.jpg    1x,
+                        ./images/portfolio/pf5-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf5-tab.jpg    1x,
+                        ./images/portfolio/pf5-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf5-mob.jpg    1x,
+                        ./images/portfolio/pf5-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf5.jpg"
+                      alt="дві невнликих коробочки"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
+
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -218,7 +415,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="pf-text">
                   <h3 class="main-list-tittle">
                     Проєкт <span lang="en">Boxes</span>
@@ -227,15 +423,40 @@
                 </div>
               </a>
             </li>
+
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf6.jpg"
-                    alt="комп'ютерний монітор"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf6.jpg    1x,
+                        ./images/portfolio/pf6-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf6-tab.jpg    1x,
+                        ./images/portfolio/pf6-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf6-mob.jpg    1x,
+                        ./images/portfolio/pf6-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf6.jpg"
+                      alt="комп'ютерний монітор"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -245,7 +466,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="pf-text">
                   <h3 class="main-list-tittle" lang="en">
                     Inspiration has no Borders
@@ -254,15 +474,40 @@
                 </div>
               </a>
             </li>
+
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf7.jpg"
-                    alt="розгорнутий журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf7.jpg    1x,
+                        ./images/portfolio/pf7-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf7-tab.jpg    1x,
+                        ./images/portfolio/pf7-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf7-mob.jpg    1x,
+                        ./images/portfolio/pf7-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf7.jpg"
+                      alt="розгорнутий журнал"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -272,7 +517,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="pf-text">
                   <h3 class="main-list-tittle">
                     Видання <span lang="en">Limited Edition</span>
@@ -281,15 +525,40 @@
                 </div>
               </a>
             </li>
+
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf8.jpg"
-                    alt="бірка з логотипом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf8.jpg    1x,
+                        ./images/portfolio/pf8-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf8-tab.jpg    1x,
+                        ./images/portfolio/pf8-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf8-mob.jpg    1x,
+                        ./images/portfolio/pf8-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf8.jpg"
+                      alt="бірка з логотипом"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -299,7 +568,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="pf-text">
                   <h3 class="main-list-tittle">
                     Проєкт <span lang="en">LAB</span>
@@ -308,15 +576,40 @@
                 </div>
               </a>
             </li>
+
             <li class="main-list-item">
               <a class="link main-list-link" href="#">
                 <div class="main-thumb">
-                  <img
-                    src="./images/pf9.jpg"
-                    alt="людина працює за ноутбуком"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf9.jpg    1x,
+                        ./images/portfolio/pf9-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf9-tab.jpg    1x,
+                        ./images/portfolio/pf9-2x-tab.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf9-mob.jpg    1x,
+                        ./images/portfolio/pf9-2x-mob.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf9.jpg"
+                      alt="людина працює за ноутбуком"
+                      width="370"
+                      height="294"
+                      class="main-list-img"
+                    />
+                  </picture>
                   <div class="main-overlay">
                     <p class="main-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -326,7 +619,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="pf-text">
                   <h3 class="main-list-tittle" lang="en">Growing Business</h3>
                   <p class="main-list-text">Додаток</p>
@@ -341,88 +633,93 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__wrap">
-          <div class="connect">
-            <a class="link logo" href="./index.html"
-              ><span class="logo--accent-text">Web</span
-              ><span class="logo--white-text">Studio</span></a
-            >
-            <address class="footer__contacts">
-              <ul class="list address">
-                <li class="address__item">
+          <div class="tablet-wrap">
+            <div class="connect">
+              <a class="link logo" href="./index.html"
+                ><span class="logo--accent-text">Web</span
+                ><span class="logo--white-text">Studio</span></a
+              >
+              <address class="footer__contacts">
+                <ul class="list address">
+                  <li class="address__item">
+                    <a
+                      class="link address__link"
+                      href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      >м. Київ, пр-т Лесі Українки, 26</a
+                    >
+                  </li>
+                  <li class="address__item">
+                    <a
+                      class="link address__mail"
+                      href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="address__item">
+                    <a class="link address__tel" href="tel:+380961111111"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="footer__soc">
+              <h3 class="footer__title">Приєднуйтесь</h3>
+              <ul class="soc__list list">
+                <li class="soc__item">
                   <a
-                    class="link address__link"
-                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                    href=""
+                    class="soc__link link"
                     target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    >м. Київ, пр-т Лесі Українки, 26</a
+                    rel="noreferrer noopener"
                   >
+                    <svg class="soc__ikon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="address__item">
-                  <a class="link address__mail" href="mailto:info@devstudio.com"
-                    >info@devstudio.com</a
+                <li class="soc__item">
+                  <a
+                    href=""
+                    class="soc__link link"
+                    target="_blank"
+                    rel="noreferrer noopener"
                   >
+                    <svg class="soc__ikon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="address__item">
-                  <a class="link address__tel" href="tel:+380961111111"
-                    >+38 096 111 11 11</a
+                <li class="soc__item">
+                  <a
+                    href=""
+                    class="soc__link link"
+                    target="_blank"
+                    rel="noreferrer noopener"
                   >
+                    <svg class="soc__ikon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="soc__item">
+                  <a
+                    href=""
+                    class="soc__link link"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <svg class="soc__ikon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
+            </div>
           </div>
-          <div class="footer__soc">
-            <h3 class="footer__title">Приєднуйтесь</h3>
-            <ul class="soc__list list">
-              <li class="soc__item">
-                <a
-                  href=""
-                  class="soc__link link"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <svg class="soc__ikon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc__item">
-                <a
-                  href=""
-                  class="soc__link link"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <svg class="soc__ikon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc__item">
-                <a
-                  href=""
-                  class="soc__link link"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <svg class="soc__ikon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc__item">
-                <a
-                  href=""
-                  class="soc__link link"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <svg class="soc__ikon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+
           <div class="footer__send">
             <h3 class="footer__title footer__title--geometry">
               Підпишіться на розсилку
@@ -440,5 +737,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
